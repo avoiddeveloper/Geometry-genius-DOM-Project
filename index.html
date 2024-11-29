@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry-genius</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+</head>
+
+<body class="font-inter">
+
+    <header class="container mx-auto text-center py-5 bg-[#1090D81A] rounded-lg my-5">
+        <h1 class="font-bold text-2xl uppercase text-slate-600">Interactive - Area Calculator</h1>
+    </header>
+
+    <main class="container mx-auto p-5">
+        <!-- Main Container -->
+        <div class="grid lg:grid-cols-3 gap-5">
+            <!-- Left Container --> 
+            <div class="lg:col-span-2 grid lg:grid-cols-3 gap-5">
+                <!-- Card-1 -->
+                <div id="card-1" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/triangle.png" alt="triangle" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Triangle</h2>
+                        <p>Area (A) = 0.5 b x h</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Base (cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Height (cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-2 -->
+                <div id="card-2" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/rectangle.png" alt="rectangle" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rectangle</h2>
+                        <p>Area (A) = w x I</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Width(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Length(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card-3 -->
+                <div id="card-3" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/parallelogram.png" alt="parallelogram" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Parallelogram</h2>
+                        <p>Area (A) = b X h</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Base(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Height(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card-4 -->
+                <div id="card-4" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/rhombus.png" alt="rhombus" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 x d1 x d2</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Base(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Height(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card-5 -->
+                <div id="card-5" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/pentagon.png" alt="rhombus" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Rhombus</h2>
+                        <p>Area (A) = 0.5 x p x d</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Perimeter(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Diagonal(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card-6 -->
+                <div id="card-6" class="card border">
+                    <figure class="px-10 pt-10">
+                        <img src="./images/ellipse.png" alt="ellipse" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p>Area (A) = &pi;ab</p>
+                        <div class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="Enter Perimeter(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Enter Diagonal(cm)" class="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Container -->
+            <div class="lg:col-span-1 h-80 lg:h-1/2 border-2 rounded-xl lg:p-5">
+                <div class="text-center py-2 lg:py-4">
+                    <h2 class="font-bold text-lg lg:text-2xl underline ">Area Calculation</h2>
+                </div>
+                <div id="result_board">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Customize Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        'inter': ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom Js -->
+    <script src="./js/custom.js"></script>
+</body>
+
+</html>
